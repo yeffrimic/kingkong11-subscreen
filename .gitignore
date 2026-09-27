@@ -1,0 +1,34 @@
+# --- Nunca subir binarios del fabricante -------------------------------------
+# Los APK y jars extraídos del teléfono son firmware propietario de Cubot/MediaTek.
+# Este repo documenta los hallazgos; no redistribuye el firmware.
+*.apk
+*.dex
+*.jar
+*.so
+apks/
+dex/
+dex_svc/
+dex_hxy/
+fw/
+
+# --- Salidas de decompilación (regenerables con jadx) ------------------------
+jadx-*/
+!docs/decompiled/
+
+# --- Artefactos de build -----------------------------------------------------
+build/
+*.keystore
+*.jks
+
+# --- Volcados con datos del dispositivo --------------------------------------
+# Pueden contener el serial, paquetes instalados y otros datos personales.
+raw_*.txt
+res_mini.txt
+manifest_*.txt
+badging.txt
+ui.xml
+dump-*/
+
+# --- Sistema -----------------------------------------------------------------
+.DS_Store
+Thumbs.db
